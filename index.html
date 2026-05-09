@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSec Tools Dashboard</title>
+  <meta name="description" content="Interactive dashboard explaining custom Python cybersecurity scripts.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Include Prism for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="ambient-bg"></div>
+
+  <div id="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h2>CyberSec <span>Lab</span></h2>
+      </div>
+      <div class="sidebar-subtitle">Python Toolkit Analysis</div>
+      
+      <nav id="nav-menu">
+        <!-- Navigation items injected dynamically by JS -->
+      </nav>
+      
+      <div class="sidebar-footer">
+        <p>Strict Lab Environment</p>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main id="content">
+      <div id="view-container">
+        <!-- Content injected dynamically by JS -->
+      </div>
+    </main>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

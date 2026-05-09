@@ -1,0 +1,157 @@
+{
+  "generated_at_utc": "2026-05-09T06:48:47.321801+00:00",
+  "environment": {
+    "base_dir": "/Users/user/Desktop/sundayTask",
+    "authorized_lab_only": true
+  },
+  "summary": {
+    "tests_total": 8,
+    "pass": 8,
+    "fail": 0
+  },
+  "runs": [
+    {
+      "name": "script_01_breach_detector",
+      "command": "python3 01_log_breach_detector.py --log sample_auth.log --threshold 5 --output lab_out_01_breach_report_2026-05-08.json",
+      "return_code": 0,
+      "duration_sec": 0.124,
+      "log_file": "script_01_breach_detector.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_02_windows_event_analyzer",
+      "command": "python3 02_win_event_analyzer.py --demo --severity LOW --output lab_out_02_win_findings_2026-05-08.json",
+      "return_code": 0,
+      "duration_sec": 0.117,
+      "log_file": "script_02_windows_event_analyzer.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_03_network_analyzer",
+      "command": "python3 03_net_analyzer.py --demo --output lab_out_03_net_alerts_2026-05-08.json",
+      "return_code": 0,
+      "duration_sec": 2.266,
+      "log_file": "script_03_network_analyzer.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_04_alert_triage",
+      "command": "python3 04_alert_triage.py --alerts sample_alerts.json --top 5 --html lab_out_04_triage_2026-05-08.html --json-out lab_out_04_incidents_2026-05-08.json",
+      "return_code": 0,
+      "duration_sec": 0.108,
+      "log_file": "script_04_alert_triage.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_05_phish_detector",
+      "command": "python3 05_phish_detector.py --dir . --output lab_out_05_phish_report_2026-05-08.json",
+      "return_code": 0,
+      "duration_sec": 0.176,
+      "log_file": "script_05_phish_detector.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_06_siem_ingest_syslog",
+      "command": "python3 06_siem.py --log sample_auth.log --source syslog --db lab_out_06_siem_2026-05-08.db",
+      "return_code": 0,
+      "duration_sec": 0.143,
+      "log_file": "script_06_siem_ingest_syslog.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_06_siem_ingest_apache",
+      "command": "python3 06_siem.py --log sample_apache.log --source apache --db lab_out_06_siem_2026-05-08.db",
+      "return_code": 0,
+      "duration_sec": 0.116,
+      "log_file": "script_06_siem_ingest_apache.log",
+      "status": "PASS"
+    },
+    {
+      "name": "script_06_siem_dashboard_export",
+      "command": "python3 06_siem.py --dashboard --export lab_out_06_siem_alerts_2026-05-08.json --db lab_out_06_siem_2026-05-08.db",
+      "return_code": 0,
+      "duration_sec": 0.114,
+      "log_file": "script_06_siem_dashboard_export.log",
+      "status": "PASS"
+    }
+  ],
+  "artifacts": {
+    "out_01": "lab_out_01_breach_report_2026-05-08.json",
+    "out_02": "lab_out_02_win_findings_2026-05-08.json",
+    "out_03": "lab_out_03_net_alerts_2026-05-08.json",
+    "out_04_html": "lab_out_04_triage_2026-05-08.html",
+    "out_04_json": "lab_out_04_incidents_2026-05-08.json",
+    "out_05": "lab_out_05_phish_report_2026-05-08.json",
+    "out_06_db": "lab_out_06_siem_2026-05-08.db",
+    "out_06_json": "lab_out_06_siem_alerts_2026-05-08.json"
+  },
+  "artifact_checks": {
+    "out_01": {
+      "exists": true,
+      "json_ok": true,
+      "top_level_keys": [
+        "log_file",
+        "analyzed_at",
+        "total_alerts",
+        "brute_counts",
+        "alerts"
+      ],
+      "alerts": 40,
+      "total_alerts": 40
+    },
+    "out_02": {
+      "exists": true,
+      "json_ok": true,
+      "top_level_keys": [
+        "findings",
+        "top_event_ids"
+      ],
+      "findings": 6
+    },
+    "out_03": {
+      "exists": true,
+      "json_ok": true,
+      "top_level_keys": [
+        "alerts",
+        "raw_count"
+      ],
+      "alerts": 6
+    },
+    "out_04_json": {
+      "exists": true,
+      "json_ok": true,
+      "type": "list",
+      "items": 9
+    },
+    "out_05": {
+      "exists": true,
+      "json_ok": true,
+      "type": "list",
+      "items": 2
+    },
+    "out_06_json": {
+      "exists": true,
+      "json_ok": true,
+      "top_level_keys": [
+        "exported_at",
+        "count",
+        "events"
+      ],
+      "events": 38,
+      "count": 38
+    },
+    "out_04_html": {
+      "exists": true,
+      "bytes": 3194
+    },
+    "out_06_db": {
+      "exists": true,
+      "bytes": 40960
+    }
+  },
+  "notes": [
+    "Tool 02 and Tool 03 were tested in demo mode for safe/offline lab validation.",
+    "Tool 06 was validated through two ingestion steps plus dashboard/export.",
+    "All commands were executed locally in a controlled learning environment."
+  ]
+}

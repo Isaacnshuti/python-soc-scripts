@@ -1,0 +1,21 @@
+From: "PayPal Security" <security@paypa1-support.com>
+To: victim@company.com
+Subject: Urgent: Your PayPal account has been suspended
+Reply-To: recover@paypa1-support.net
+Message-ID: <phish001@paypa1-support.com>
+Date: Wed, 07 May 2026 09:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<body>
+<p>Dear Valued Customer,</p>
+<p>We have detected unauthorized access detected on your account.
+Your account will be closed within 24 hours if you do not verify your account immediately.</p>
+<p>Please click here to secure your account and confirm your identity:</p>
+<p><a href="http://192.168.100.200/paypal/login.php">http://paypal.com.secure-login.verify-account.net/login</a></p>
+<p>Also verify via our secure portal: <a href="http://bit.ly/3xPa3Lk">Click Here</a></p>
+<p>Act now - limited time offer to restore your account.</p>
+<p>Thank you,<br>PayPal Security Team</p>
+</body>
+</html>

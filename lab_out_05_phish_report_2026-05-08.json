@@ -1,0 +1,53 @@
+[
+  {
+    "file": "sample_phish.eml",
+    "subject": "Urgent: Your PayPal account has been suspended",
+    "from": "PayPal Security <security@paypa1-support.com>",
+    "message_id": "<phish001@paypa1-support.com>",
+    "analyzed_at": "2026-05-09T06:48:50.104599+00:00",
+    "finding_count": 6,
+    "verdict": "MALICIOUS",
+    "findings": [
+      {
+        "type": "SPOOFED_SENDER",
+        "severity": "HIGH",
+        "detail": "From domain [paypa1-support.com] != Reply-To domain [paypa1-support.net]"
+      },
+      {
+        "type": "DISPLAY_NAME_SPOOF",
+        "severity": "HIGH",
+        "detail": "Display name claims 'paypal' but email is <security@paypa1-support.com>"
+      },
+      {
+        "type": "URGENCY_KEYWORDS",
+        "severity": "MEDIUM",
+        "detail": "Found: ['verify your account', 'confirm your identity', 'your account will be closed']"
+      },
+      {
+        "type": "IP_BASED_URL",
+        "severity": "HIGH",
+        "detail": "URL uses raw IP: http://192.168.100.200/paypal/login.php"
+      },
+      {
+        "type": "CRED_HARVEST_DOMAIN",
+        "severity": "HIGH",
+        "detail": "Suspicious credential-harvest domain: paypal.com.secure-login.verify-account.net"
+      },
+      {
+        "type": "URL_SHORTENER",
+        "severity": "MEDIUM",
+        "detail": "Shortened URL (destination hidden): http://bit.ly/3xPa3Lk"
+      }
+    ]
+  },
+  {
+    "file": "sample_clean.eml",
+    "subject": "Q2 Budget Report",
+    "from": "Alice Smith <alice@company.com>",
+    "message_id": "<clean001@company.com>",
+    "analyzed_at": "2026-05-09T06:48:50.107136+00:00",
+    "finding_count": 0,
+    "verdict": "CLEAN",
+    "findings": []
+  }
+]

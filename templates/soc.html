@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Monitoring Presentation</title>
+  <meta name="description" content="Presentation of cybersecurity monitoring and breach detection Python scripts.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .script-project-btn {
+      text-align: left;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+    }
+
+    .script-project-btn.active {
+      border-color: rgba(255, 255, 255, 0.45);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+
+    .script-detail {
+      margin-top: 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      background: linear-gradient(160deg, #141414, #101010);
+      box-shadow: var(--shadow-md);
+      padding: 1.35rem;
+    }
+
+    .script-detail-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.9rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .script-detail-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.35rem, 3.8vw, 2rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .script-detail-sub {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      margin-top: 0.3rem;
+    }
+
+    .status-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 0.34rem 0.74rem;
+      border: 1px solid rgba(21, 184, 138, 0.4);
+      color: #9af4dc;
+      background: rgba(21, 184, 138, 0.15);
+      white-space: nowrap;
+    }
+
+    .script-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .detail-card {
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      background: var(--bg-card);
+      padding: 0.95rem;
+    }
+
+    .detail-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .detail-card p,
+    .detail-card li {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+      line-height: 1.58;
+    }
+
+    .detail-card ul {
+      margin-left: 1rem;
+      display: grid;
+      gap: 0.28rem;
+    }
+
+    .cmd-block {
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      background: #0c0c0c;
+      padding: 0.85rem 0.95rem;
+      font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+      font-size: 0.82rem;
+      color: #ececec;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-top: 0.5rem;
+    }
+
+    .simple-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .simple-item {
+      border: 1px solid var(--border);
+      border-radius: 0.95rem;
+      background: var(--bg-card);
+      padding: 0.95rem 1rem;
+    }
+
+    .simple-item b {
+      display: block;
+      margin-bottom: 0.22rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.98rem;
+    }
+
+    .simple-item p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 920px) {
+      .script-detail-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Cybersecurity Presentation</div>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Overview</a>
+        <a href="#projects" class="nav-link">Script Slides</a>
+        <a href="#testing" class="nav-link">Validation</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-shell">
+        <div class="hero-content fade-in-up">
+          <p class="hero-tag">Cybersecurity Monitoring Program</p>
+          <h1 class="hero-title">Python Security Scripts - Technical Presentation</h1>
+          <p class="hero-subtitle">Breach Detection, SOC Analysis, Triage, Phishing, Networking, SIEM</p>
+          <p class="hero-description">
+            This presentation explains the required task end-to-end: develop/collect relevant scripts, test them in a safe lab, verify execution, and provide clear report-ready explanations.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Open Script Slides</a>
+            <a href="#testing" class="btn btn-secondary">Open Validation Flow</a>
+          </div>
+        </div>
+
+        <aside class="hero-visual fade-in-up">
+          <div class="identity">
+            <div class="identity-name">Task Focus</div>
+            <p class="identity-role">Python scripts for SOC monitoring, breach detection, triage, phishing, networking, and SIEM basics.</p>
+            <div class="identity-meta">
+              <span class="identity-chip">SOC</span>
+              <span class="identity-chip">IDS</span>
+              <span class="identity-chip">SIEM</span>
+              <span class="identity-chip">Blue Team</span>
+            </div>
+          </div>
+          <div class="quick-grid">
+            <div class="quick-card">
+              <p class="quick-label">Primary Goal</p>
+              <p class="quick-value">Clear Technical Evidence</p>
+            </div>
+            <div class="quick-card">
+              <p class="quick-label">Format</p>
+              <p class="quick-value">Clickable Presentation Slides</p>
+            </div>
+            <div class="quick-card">
+              <p class="quick-label">Report Output</p>
+              <p class="quick-value">What / How / Success / Improvements</p>
+            </div>
+            <div class="quick-card">
+              <p class="quick-label">Policy</p>
+              <p class="quick-value">Authorized Virtual Lab Only</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-eyebrow fade-in-up">Presentation Slides</p>
+      <h2 class="section-title fade-in-up">Script Library and Explanations</h2>
+      <p class="section-subtitle fade-in-up">Click one script to view clear explanations ready for your report.</p>
+
+      <div id="scriptCards" class="grid"></div>
+
+      <article id="scriptDetail" class="script-detail fade-in-up"></article>
+    </div>
+  </section>
+
+  <section id="testing" class="section">
+    <div class="container">
+      <p class="section-eyebrow fade-in-up">Validation Workflow</p>
+      <h2 class="section-title fade-in-up">Simple Testing and Verification</h2>
+      <p class="section-subtitle fade-in-up">Based on your email request: run safely, verify correctly, document results.</p>
+
+      <div class="simple-list fade-in-up">
+        <article class="simple-item">
+          <b>1) Develop or collect scripts</b>
+          <p>Scripts 01 to 06 cover breach detection, Windows/Sysmon-style analysis, triage, phishing, networking, and SIEM concepts.</p>
+        </article>
+        <article class="simple-item">
+          <b>2) Test in safe virtual lab</b>
+          <p>Run only in authorized VM/lab. Never run on unauthorized or production systems.</p>
+        </article>
+        <article class="simple-item">
+          <b>3) Verify each script</b>
+          <p>Check command return code, output file creation, and result content (alerts/findings/incidents/events).</p>
+        </article>
+        <article class="simple-item">
+          <b>4) Prepare short report</b>
+          <p>For each script: what it does, how it works, success status, and errors/improvements needed.</p>
+        </article>
+      </div>
+
+      <div class="cta-panel fade-in-up" style="margin-top:1.2rem;">
+        <h2 class="section-title">Required Policy</h2>
+        <p class="section-subtitle">All tests must be performed only in authorized virtual lab environments for learning and research.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Cybersecurity Monitoring and Breach Detection Presentation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const scripts = [
+      {
+        id: "01",
+        title: "Log Breach Detector",
+        description: "Linux authentication log detection for brute force, invalid users, and privileged abuse.",
+        tags: ["Python", "Logs", "Breach"],
+        role: "Breach detection and host-level monitoring baseline.",
+        what: "Detects suspicious activity from Linux auth logs and outputs structured alerts.",
+        how: [
+          "Reads authentication log lines.",
+          "Uses regex signatures for known attack patterns.",
+          "Counts failed logins to detect brute force.",
+          "Exports JSON alerts with severity and evidence."
+        ],
+        test: "python3 01_log_breach_detector.py --log sample_auth.log --threshold 5 --output lab_out_01_breach_report_2026-05-08.json",
+        status: "PASS",
+        success: "Execution success verified when return code is 0 and output JSON contains alerts and total_alerts.",
+        report: "This script detects suspicious Linux authentication activity and produced structured breach alerts successfully.",
+        improvements: [
+          "Add real-time monitoring mode.",
+          "Integrate threat-intel reputation checks."
+        ]
+      },
+      {
+        id: "02",
+        title: "Windows Event Analyzer",
+        description: "Analyzes suspicious Windows events and maps detections to MITRE ATT&CK techniques.",
+        tags: ["Windows", "Sysmon-style", "MITRE"],
+        role: "Log analysis for Windows events and Sysmon-style behaviors.",
+        what: "Parses Windows event patterns and highlights high-risk activity for SOC investigation.",
+        how: [
+          "Loads event records (demo or EVTX).",
+          "Extracts Event ID and security context fields.",
+          "Maps findings to ATT&CK techniques.",
+          "Applies severity escalation logic."
+        ],
+        test: "python3 02_win_event_analyzer.py --demo --severity LOW --output lab_out_02_win_findings_2026-05-08.json",
+        status: "PASS",
+        success: "Execution success verified when findings list is generated and output JSON is valid.",
+        report: "This script analyzed Windows event patterns, mapped detections to MITRE ATT&CK, and executed successfully.",
+        improvements: [
+          "Run full validation with real EVTX in VM.",
+          "Improve large-file processing performance."
+        ]
+      },
+      {
+        id: "03",
+        title: "Network Analyzer",
+        description: "Detects suspicious behaviors in TCP/IP, DNS, and HTTP traffic.",
+        tags: ["TCP/IP", "DNS", "HTTP"],
+        role: "Network monitoring and protocol-level threat detection.",
+        what: "Finds network attack indicators like scans, tunneling, beaconing, and credential leakage.",
+        how: [
+          "Reads traffic in demo, PCAP, or interface mode.",
+          "Inspects packet and protocol features.",
+          "Applies entropy and behavior rules.",
+          "Exports normalized alert data."
+        ],
+        test: "python3 03_net_analyzer.py --demo --output lab_out_03_net_alerts_2026-05-08.json",
+        status: "PASS",
+        success: "Execution success verified when alerts are produced and JSON output is created without errors.",
+        report: "This script detected suspicious TCP/IP, DNS, and HTTP activity and generated validated network alerts.",
+        improvements: [
+          "Add real PCAP replay verification.",
+          "Add GeoIP and TLS context enrichment."
+        ]
+      },
+      {
+        id: "04",
+        title: "Alert Triage",
+        description: "Normalizes, deduplicates, and ranks incidents from multi-source alerts.",
+        tags: ["SOC", "Triage", "Incident"],
+        role: "Alert triage and incident investigation support.",
+        what: "Turns noisy alerts into prioritized incident lists for response operations.",
+        how: [
+          "Loads JSON alerts from file/folder.",
+          "Normalizes data schema.",
+          "Deduplicates repeated patterns.",
+          "Calculates risk score and ranks incidents."
+        ],
+        test: "python3 04_alert_triage.py --alerts sample_alerts.json --top 5 --html lab_out_04_triage_2026-05-08.html --json-out lab_out_04_incidents_2026-05-08.json",
+        status: "PASS",
+        success: "Execution success verified when HTML and JSON triage outputs are generated and incidents are ranked.",
+        report: "This script prioritized incidents by risk after normalizing and deduplicating multi-source alerts.",
+        improvements: [
+          "Add timeline drill-down.",
+          "Add analyst ownership/status fields."
+        ]
+      },
+      {
+        id: "05",
+        title: "Phish Detector",
+        description: "Email phishing analysis using headers, links, and attachment indicators.",
+        tags: ["Email", "Phishing", "Malware"],
+        role: "Phishing and malware behavior analysis in email evidence.",
+        what: "Classifies suspicious emails and explains phishing/malware indicators.",
+        how: [
+          "Parses .eml messages.",
+          "Checks spoofing and domain mismatches.",
+          "Analyzes risky links and attachment cues.",
+          "Returns MALICIOUS/SUSPICIOUS/CLEAN verdict."
+        ],
+        test: "python3 05_phish_detector.py --dir . --output lab_out_05_phish_report_2026-05-08.json",
+        status: "PASS",
+        success: "Execution success verified when email verdicts and findings are exported to JSON correctly.",
+        report: "This script classified phishing indicators from email samples and executed successfully with clear verdict output.",
+        improvements: [
+          "Add SPF/DKIM/DMARC checks.",
+          "Integrate sandbox and reputation APIs."
+        ]
+      },
+      {
+        id: "06",
+        title: "Lightweight SIEM",
+        description: "SIEM-style ingestion, correlation, and high-severity alert export.",
+        tags: ["SIEM", "Correlation", "Monitoring"],
+        role: "SIEM concepts and centralized security monitoring foundation.",
+        what: "Centralizes events and correlates suspicious behavior for security monitoring.",
+        how: [
+          "Ingests logs into SQLite.",
+          "Normalizes event records.",
+          "Runs correlation rules.",
+          "Exports high/critical events for review."
+        ],
+        test: "python3 06_siem.py --log sample_auth.log --source syslog --db lab_out_06_siem_2026-05-08.db\npython3 06_siem.py --log sample_apache.log --source apache --db lab_out_06_siem_2026-05-08.db\npython3 06_siem.py --dashboard --export lab_out_06_siem_alerts_2026-05-08.json --db lab_out_06_siem_2026-05-08.db",
+        status: "PASS",
+        success: "Execution success verified when SIEM database and exported high/critical alert JSON are produced.",
+        report: "This script implemented SIEM ingestion and correlation, then exported high-priority security events successfully.",
+        improvements: [
+          "Move to scalable backend for production.",
+          "Externalize rule engine configuration."
+        ]
+      }
+    ];
+
+    function esc(v) {
+      return String(v)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderCards(selectedId) {
+      const host = document.getElementById('scriptCards');
+      host.innerHTML = scripts.map(s => `
+        <button class="project-card card fade-in-up script-project-btn ${s.id === selectedId ? 'active' : ''}" onclick="selectScript('${s.id}')">
+          <div class="project-image" style="display:flex;align-items:flex-end;padding:.75rem;background:linear-gradient(135deg,#171717,#2a2a2a) !important;">
+            <div class="project-tag">SCRIPT ${esc(s.id)}</div>
+          </div>
+          <div class="project-title">${esc(s.title)}</div>
+          <p class="project-description">${esc(s.description)}</p>
+          <div class="project-tags">${s.tags.map(t => `<span class='project-tag'>${esc(t)}</span>`).join('')}</div>
+          <div class="project-links"><span class="btn btn-secondary" style="pointer-events:none;">Open Slide</span></div>
+        </button>
+      `).join('');
+    }
+
+    function selectScript(id) {
+      const s = scripts.find(x => x.id === id) || scripts[0];
+      renderCards(s.id);
+
+      const detail = document.getElementById('scriptDetail');
+      detail.innerHTML = `
+        <div class="script-detail-head">
+          <div>
+            <div class="script-detail-title">${esc(s.id)} - ${esc(s.title)}</div>
+            <div class="script-detail-sub">Clear slide explanation aligned with your report requirements.</div>
+          </div>
+          <span class="status-pill">${esc(s.status)}</span>
+        </div>
+
+        <div class="script-detail-grid">
+          <article class="detail-card">
+            <h3>What The Script Does</h3>
+            <p>${esc(s.what)}</p>
+          </article>
+          <article class="detail-card">
+            <h3>Role In Task</h3>
+            <p>${esc(s.role)}</p>
+          </article>
+          <article class="detail-card">
+            <h3>How It Works</h3>
+            <ul>${s.how.map(step => `<li>${esc(step)}</li>`).join('')}</ul>
+          </article>
+          <article class="detail-card">
+            <h3>How To Test</h3>
+            <div class="cmd-block">${esc(s.test)}</div>
+          </article>
+          <article class="detail-card">
+            <h3>Execution Success</h3>
+            <p>${esc(s.success)}</p>
+          </article>
+          <article class="detail-card">
+            <h3>Report Wording</h3>
+            <p>${esc(s.report)}</p>
+          </article>
+          <article class="detail-card">
+            <h3>Errors / Improvements</h3>
+            <ul>${s.improvements.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+          </article>
+        </div>
+      `;
+    }
+
+    selectScript('01');
+  </script>
+</body>
+</html>

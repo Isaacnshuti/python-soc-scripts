@@ -1,0 +1,41 @@
+{
+  "alerts": [
+    {
+      "type": "CRED_LEAK_HTTP",
+      "severity": "CRITICAL",
+      "src": "10.0.0.15",
+      "detail": "Authorization: Basic dXNlcjpwYXNzd29yZDEyMw== GET /admin HTTP/1.1"
+    },
+    {
+      "type": "DNS_TUNNEL_QUERY",
+      "severity": "HIGH",
+      "src": "10.0.0.42",
+      "detail": "Entropy=4.12, label=aGVsbG8td29ybGQtdGhpcy1pcy1hLXRlc3Q"
+    },
+    {
+      "type": "PORT_SCAN",
+      "severity": "HIGH",
+      "src": "203.0.113.77",
+      "detail": "SYN to 20+ unique ports detected"
+    },
+    {
+      "type": "DNS_LARGE_RESPONSE",
+      "severity": "MEDIUM",
+      "src": "10.0.0.42",
+      "detail": "DNS response size: 724 bytes"
+    },
+    {
+      "type": "CLEARTEXT_FTP",
+      "severity": "HIGH",
+      "src": "10.0.0.8",
+      "detail": "USER ftpuser PASS s3cr3tpass"
+    },
+    {
+      "type": "POSSIBLE_BEACON",
+      "severity": "MEDIUM",
+      "src": "10.0.0.55",
+      "detail": "Repeated contact to 185.220.101.1 within 5s"
+    }
+  ],
+  "raw_count": 6
+}

